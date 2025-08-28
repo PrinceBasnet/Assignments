@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Full Stack Web Assignment</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f8f9fa;
+      display: flex;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .sidebar {
+      background: linear-gradient(180deg, #43cea2, #185a9d, #2b5876, #4e4376);
+      background-size: 400% 400%;
+      animation: gradientMove 8s ease infinite;
+      width: 220px;
+      min-height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1050;
+      padding-top: 40px;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .sidebar .navbar-brand {
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      text-align: center;
+      text-decoration: none;
+    }
+    .sidebar-nav {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+    }
+    .sidebar-nav .nav-item {
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    .sidebar-nav .nav-link {
+      color: #fff !important;
+      font-weight: bold;
+      font-size: 1.08rem;
+      text-decoration: none;
+      transition: color 0.3s, background 0.3s;
+      padding: 10px 0;
+      display: block;
+      border-radius: 6px;
+    }
+    .sidebar-nav .nav-link:hover,
+    .sidebar-nav .nav-link.active {
+      color: #ffd700 !important;
+      background: rgba(255,255,255,0.08);
+    }
+    .main-content {
+      margin-left: 240px;
+      width: 100%;
+      padding: 0;
+    }
+    section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 800px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+      margin-top: 40px;
+      background: #e9ecef;
+      margin-left: 240px;
+    }
+    @media (max-width: 800px) {
+      .sidebar { width: 100px; padding-top: 20px; }
+      .sidebar .navbar-brand { font-size: 1rem; margin-bottom: 18px; }
+      .sidebar-nav .nav-link { font-size: 0.9rem; padding: 8px 0; }
+      .main-content { margin-left: 110px; }
+      footer { margin-left: 110px; }
+    }
+    @media (max-width: 500px) {
+      .sidebar { width: 60px; }
+      .sidebar .navbar-brand { display: none; }
+      .sidebar-nav .nav-link { font-size: 0.7rem; padding: 6px 0; }
+      .main-content { margin-left: 70px; }
+      footer { margin-left: 70px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <a class="navbar-brand" href="#">Home</a>
+    <ul class="sidebar-nav">
+      <li class="nav-item"><a class="nav-link" href="#fullstack">Full Stack</a></li>
+      <li class="nav-item"><a class="nav-link" href="#html">HTML</a></li>
+      <li class="nav-item"><a class="nav-link" href="#css">CSS</a></li>
+      <li class="nav-item"><a class="nav-link" href="#bootstrap">Bootstrap</a></li>
+      <li class="nav-item"><a class="nav-link" href="#javascript">JavaScript</a></li>
+    </ul>
+  </nav>
+  <div class="main-content">
+    <section id="home" style="height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(120deg, #43cea2 0%, #185a9d 100%); color: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.12); margin-top: 0;">
+      <h1 style="font-size: 3rem; font-weight: bold; margin-bottom: 20px;">Welcome to Full Stack Web Assignment</h1>
+      <p style="font-size: 1.5rem; max-width: 600px; text-align: center;">
+        Discover the world of Full Stack Development! <br>
+        Use the navigation on the left to explore HTML, CSS, Bootstrap, and JavaScript.
+      </p>
+      <footer style="margin-top: 40px; font-size: 1.1rem; color: #ffd700; background: none; box-shadow: none;">
+        <p>By Prince Basnet</p>
+      </footer>
+    </section>
+    <section id="fullstack">
+      <h2>Full Stack Development</h2>
+      <p>
+        Full stack development refers to the development of both front-end (client side) and back-end (server side) portions of a web application. A full stack developer has the skills to work with databases, servers, APIs, and client-side technologies.
+      </p>
+      <ul>
+        <li>Front-end: HTML, CSS, JavaScript, Bootstrap</li>
+        <li>Back-end: Node.js, Express, Python, Java, etc.</li>
+        <li>Database: MySQL, MongoDB, PostgreSQL, etc.</li>
+      </ul>
+      <img src="image/fullstack.webp" alt="Full Stack Example" style="max-width:400px; border-radius:8px;">
+    </section>
+
+    <section id="html">
+      <h2>HTML</h2>
+      <p>
+        HTML (HyperText Markup Language) is the standard markup language for creating web pages. It provides the structure for web content using elements like headings, paragraphs, lists, tables, images, and forms.
+      </p>
+      <ul>
+        <li><strong>&lt;html&gt;</strong> &rarr; Wraps the whole webpage content.</li>
+        <li><strong>&lt;head&gt;</strong> &rarr; Contains information about the page (title, links, metadata).</li>
+        <li><strong>&lt;body&gt;</strong> &rarr; Contains everything users see on the webpage.</li>
+        <li><strong>&lt;h1&gt; … &lt;h6&gt;</strong> &rarr; Headings (H1 is the biggest, H6 is the smallest).</li>
+        <li><strong>&lt;p&gt;</strong> &rarr; Paragraph of text.</li>
+        <li><strong>&lt;a href="URL"&gt;</strong> &rarr; Creates a link to another page or site.</li>
+        <li><strong>&lt;img src="image.jpg" alt="description"&gt;</strong> &rarr; Displays an image.</li>
+        <li><strong>&lt;ul&gt;</strong> and <strong>&lt;ol&gt;</strong> &rarr; Unordered (bullets) and ordered (numbers) lists.</li>
+        <li><strong>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;</strong> &rarr; Used to create tables with rows and cells.</li>
+        <li><strong>&lt;form&gt;</strong> &rarr; Collects user input (e.g., text fields, checkboxes, buttons).</li>
+      </ul>
+      <img src="image/what-is-html-3.webp" alt="HTML Example" style="max-width:400px; border-radius:8px;">
+    </section>
+
+    <section id="css">
+      <h2>CSS</h2>
+      <p>
+        CSS (Cascading Style Sheets) is used to style and layout web pages. It controls the color, font, spacing, and positioning of HTML elements, making websites visually appealing and responsive.
+      </p>
+      <ul>
+        <li><strong>color</strong> &rarr; Sets text color.</li>
+        <li><strong>background-color</strong> &rarr; Changes background color.</li>
+        <li><strong>font-family</strong> &rarr; Changes the style of the text (e.g., Arial, Verdana).</li>
+        <li><strong>margin</strong> &rarr; Space outside an element.</li>
+        <li><strong>padding</strong> &rarr; Space inside an element (around content).</li>
+        <li><strong>border</strong> &rarr; Adds a border around an element.</li>
+        <li><strong>width / height</strong> &rarr; Sets size of elements.</li>
+        <li><strong>display</strong> (<em>block, inline, flex, grid</em>) &rarr; Controls layout behavior.</li>
+        <li><strong>text-align</strong> &rarr; Aligns text (left, right, center).</li>
+        <li><strong>:hover</strong> (pseudo-class) &rarr; Changes style when mouse hovers over an element.</li>
+      </ul>
+      <img src="image/css.webp" alt="CSS Example" style="max-width:400px;  border-radius:8px;">
+    </section>
+
+    <section id="bootstrap">
+      <h2>Bootstrap</h2>
+      <p>
+        Bootstrap is a popular front-end framework for building responsive and mobile-first websites quickly. It provides ready-to-use components like navigation bars, buttons, forms, and grids.
+      </p>
+      <ul>
+        <li><strong>.container</strong> &rarr; Wraps content with proper spacing.</li>
+        <li><strong>.row</strong> &rarr; Creates a horizontal group of columns.</li>
+        <li><strong>.col-</strong> (e.g., <strong>.col-md-6</strong>) &rarr; Defines how wide a column is (responsive).</li>
+        <li><strong>.btn</strong>, <strong>.btn-primary</strong>, <strong>.btn-success</strong> &rarr; Pre-styled buttons.</li>
+        <li><strong>.card</strong> &rarr; A content box with padding and shadow.</li>
+        <li><strong>.navbar</strong> &rarr; Creates a responsive navigation bar.</li>
+        <li><strong>.table</strong>, <strong>.table-striped</strong>, <strong>.table-bordered</strong> &rarr; Pre-styled tables.</li>
+        <li><strong>.text-center</strong>, <strong>.text-primary</strong>, <strong>.bg-light</strong> &rarr; Text and background utilities.</li>
+        <li><strong>.alert</strong>, <strong>.alert-warning</strong>, <strong>.alert-success</strong> &rarr; Alert boxes for messages.</li>
+        <li><strong>.form-control</strong> &rarr; Styles input fields and forms.</li>
+      </ul>
+      <img src="image/bootstrap-responsive.webp" alt="Bootstrap Example" style="max-width:400px; border-radius:8px;">
+    </section>
+
+    <section id="javascript">
+      <h2>JavaScript</h2>
+      <p>
+        JavaScript is a versatile programming language that enables interactive and dynamic features on web pages. It can manipulate HTML and CSS, handle events, validate forms, and communicate with servers.
+      </p>
+      <ul>
+        <li><strong>document.getElementById("id")</strong> &rarr; Selects an element by its ID.</li>
+        <li><strong>document.querySelector("selector")</strong> &rarr; Selects an element using CSS-style selectors.</li>
+        <li><strong>innerHTML</strong> &rarr; Changes the content inside an element.</li>
+        <li><strong>style.property</strong> &rarr; Changes CSS with JS (e.g., <code>element.style.color="red"</code>).</li>
+        <li><strong>addEventListener("click", function)</strong> &rarr; Runs code when a user clicks.</li>
+        <li><strong>alert("message")</strong> &rarr; Shows a popup message.</li>
+        <li><strong>console.log("text")</strong> &rarr; Prints to the browser console (for debugging).</li>
+        <li><strong>if...else</strong> &rarr; Runs different code depending on conditions.</li>
+        <li><strong>for / while</strong> &rarr; Loops that repeat code.</li>
+        <li><strong>function myFunction()</strong> &rarr; Groups reusable code.</li>
+      </ul>
+      <img src="image/js.webp" alt="JavaScript Example" style="max-width:400px; border-radius:8px;">
+    </section>
+    <footer>
+      <hr>
+      <p>&copy; 2025 Full Stack Web Assignment by Prince Basnet</p>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
